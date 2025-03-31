@@ -1,11 +1,13 @@
 .management {
-    display: inline-flex;
     width: 100%;
-    margin: 20px;
+    padding: 20px 0;
+    display: inline-flex;
     box-shadow: 1px 1px 1px;
-    padding: 20px;
     border-radius: 10px;
     background-color: #efedf0;
+    form {
+        margin: 0 20px;
+    }
     button {
         margin-left: 20px;
     }
