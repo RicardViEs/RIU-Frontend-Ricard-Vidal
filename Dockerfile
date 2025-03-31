@@ -1,6 +1,6 @@
 FROM node:alpine AS build
 
-WORKDIR /path/to/Riu-Frontend-Ricard-Vidal
+WORKDIR /home/rick/Programs/Riu-Frontend-Ricard-Vidal
 
 COPY package.json package-lock.json ./
 
@@ -12,8 +12,10 @@ RUN npm run build --prod
 
 FROM nginx:alpine
 
-COPY --from=build dist/riu-frontend-ricard-vidal /usr/share/nginx/html
+COPY --from=build /home/rick/Programs/Riu-Frontend-Ricard-Vidal/dist/riu-frontend-ricard-vidal /usr/share/nginx/html
 
-EXPOSE 80
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 4200
 
 CMD ["nginx", "-g", "daemon off;"]
