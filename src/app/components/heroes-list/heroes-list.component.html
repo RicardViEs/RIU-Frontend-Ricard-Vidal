@@ -1,4 +1,5 @@
-<div *ngFor="let hero of heroes$ | async | slice : pageIndex * pageSize : pageIndex * pageSize + pageSize ">
+<h3>Heroes List</h3>
+<div *ngFor="let hero of heroes$ | async | slice : pageIndex * pageSize : pageIndex * pageSize + pageSize " class="heroes-list">
     <app-hero-card [hero]="hero"></app-hero-card>
 </div>
 <mat-paginator [length]="length"

@@ -1,1 +1,14 @@
-<p>edit-hero-form works!</p>
+<form [formGroup]="heroForm" (ngSubmit)="updateHero()">
+    
+    <label for="name">Name</label>
+    <input name="name" formControlName="name" appUppercase>
+    
+    <label for="description">Descriprion</label>
+    <input name="description" formControlName="description">
+    
+    <label for="superPower">Super Powers</label>
+    <input name="superPower" formControlName="superPower">
+
+    <button type="submit" [disabled]="!heroForm.valid">Submit</button>
+
+</form>

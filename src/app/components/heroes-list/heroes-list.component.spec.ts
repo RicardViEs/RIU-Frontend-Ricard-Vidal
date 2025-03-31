@@ -25,4 +25,6 @@ describe('HeroesListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });
