@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroCardComponent } from './hero-card.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
+import { HeroService } from '../../services/hero.service';
 
 describe('HeroCardComponent', () => {
   let component: HeroCardComponent;
@@ -8,7 +12,8 @@ describe('HeroCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroCardComponent]
+      imports: [HeroCardComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([]), HeroService]
     })
     .compileComponents();
 
