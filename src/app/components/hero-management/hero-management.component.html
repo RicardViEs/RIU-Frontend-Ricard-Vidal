@@ -2,7 +2,6 @@
     <form class="search-form" [formGroup]="searchHeroForm">
           <label for="str">Search for your hero: </label>
           <input matInput name="str" formControlName="str" (keyup)="searchHero($event)" placeholder="Search">
-          <button type="submit">Submit</button>
     </form>
     <a routerLink="create">Add a hero</a>
 </div>
