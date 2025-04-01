@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HeroService } from '../../services/hero.service';
 import { Router } from '@angular/router';
@@ -6,7 +7,7 @@ import { UppercaseDirective } from '../../directives/uppercase.directive';
 
 @Component({
   selector: 'app-add-hero-form',
-  imports: [ReactiveFormsModule, UppercaseDirective],
+  imports: [ReactiveFormsModule, UppercaseDirective, CommonModule, NgIf],
   templateUrl: './add-hero-form.component.html',
   styleUrl: './add-hero-form.component.scss'
 })

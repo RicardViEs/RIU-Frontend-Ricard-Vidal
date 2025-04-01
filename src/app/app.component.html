@@ -11,5 +11,8 @@
             </li>
         </ul>
     </nav>
+    @if ((loadingService.isLoading | async) != 0) {
+        <h1>Loading...</h1>
+    }
     <router-outlet />
 </div>
