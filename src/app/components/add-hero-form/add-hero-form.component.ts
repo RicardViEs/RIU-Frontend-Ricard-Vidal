@@ -18,16 +18,16 @@ export class AddHeroFormComponent {
   heroForm = new FormGroup({    
     name: new FormControl<string | null>('', Validators.required),    
     description: new FormControl<string | null>('', Validators.required),  
-    superPowers: new FormControl<string | null>('', Validators.required)  
+    superPower: new FormControl<string | null>('', Validators.required)  
   });
 
   addHero() {
     if (this.heroForm.valid && this.heroForm.value.name 
-      && this.heroForm.value.description && this.heroForm.value.superPowers) {
-      this.heroService.addHeroe(
+      && this.heroForm.value.description && this.heroForm.value.superPower) {
+      this.heroService.addHero(
         this.heroForm.value.name,
         this.heroForm.value.description,
-        this.heroForm.value.superPowers
+        this.heroForm.value.superPower
       ).subscribe((value) => {
         this.router.navigate(['heroes'])
       })

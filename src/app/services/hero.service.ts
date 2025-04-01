@@ -53,7 +53,7 @@ export class HeroService {
     )
   }
 
-  addHeroe(name: string, description: string, superPower: string): Observable<Hero[]> {
+  addHero(name: string, description: string, superPower: string): Observable<Hero[]> {
     const currentState = this.heroes$.getValue();
     const id = currentState.length + 1;
 

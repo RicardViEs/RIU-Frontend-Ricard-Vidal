@@ -34,7 +34,7 @@ export class EditHeroFormComponent {
 
     if (this.heroForm.valid && this.heroForm.value.name 
       && this.heroForm.value.description && this.heroForm.value.superPower
-    && this.heroId) {
+      && this.heroId) {
       this.heroService.updateHero({
         'id': this.heroId,
         'name': this.heroForm.value.name,
@@ -44,11 +44,11 @@ export class EditHeroFormComponent {
         this.router.navigate(['heroes'])
       })
     }
+
   }
   
   ngOnInit(): void {
 
-    console.log('init');
     const params = this.activatedRoute.snapshot.params;
     
     if( Object.keys( params ).length > 0 ){

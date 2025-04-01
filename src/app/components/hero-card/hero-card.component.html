@@ -1,12 +1,11 @@
 <mat-card appearance="raised">
     <mat-card-header>
-      <mat-card-title>{{hero()?.name | uppercase}} --- {{hero()?.id}}</mat-card-title>
+      <mat-card-title>{{hero()?.name | uppercase}}</mat-card-title>
       <mat-card-subtitle>{{hero()?.description}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>{{hero()?.superPower}}</p>
+      <p>Super power: {{hero()?.superPower}}</p>
       <mat-card-actions align="end">
-
         <button mat-raised-button (click)="editHero(hero()?.id)">Edit Hero</button>
         <button mat-raised-button (click)="deleteHero(hero()?.id)">Delete Hero</button>
       </mat-card-actions>

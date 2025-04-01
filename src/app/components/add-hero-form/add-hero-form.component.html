@@ -1,3 +1,4 @@
+<h3>Add a new hero</h3>
 <form [formGroup]="heroForm" (ngSubmit)="addHero()">
     
     <label for="name">Name</label>
@@ -6,8 +7,8 @@
     <label for="description">Descriprion</label>
     <input name="description" formControlName="description">
     
-    <label for="superPowers">Super Powers</label>
-    <input name="superPower" formControlName="superPowers">
+    <label for="superPower">Super Powers</label>
+    <input name="superPower" formControlName="superPower">
 
     <button type="submit" [disabled]="!heroForm.valid">Submit</button>
 

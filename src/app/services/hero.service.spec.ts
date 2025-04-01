@@ -115,7 +115,7 @@ describe('HeroService', () => {
     [HttpTestingController, HeroService],
     (httpMock: HttpTestingController, heroService: HeroService) => {
 
-      heroService.addHeroe('Invisible man', 'A hero who can turn invisible', 'invisibility').subscribe((heroes: Hero[]) => {
+      heroService.addHero('Invisible man', 'A hero who can turn invisible', 'invisibility').subscribe((heroes: Hero[]) => {
         expect(heroes.length).toBe(5);
         heroes.forEach((hero: Hero) => {
           if (hero.id === '5') {
