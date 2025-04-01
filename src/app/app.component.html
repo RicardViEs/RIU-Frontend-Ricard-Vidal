@@ -1,4 +1,15 @@
 <div class="container">
     <h1>Riu Frontend Ricard Vidal</h1>
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="heroes" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Heroes List</a>
+            </li>
+            |
+            <li>
+                <a routerLink="heroes/create" routerLinkActive="active">Create Hero</a>
+            </li>
+        </ul>
+    </nav>
     <router-outlet />
 </div>

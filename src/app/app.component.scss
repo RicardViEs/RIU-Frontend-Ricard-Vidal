@@ -2,3 +2,24 @@
     padding: 20px;
     max-width: 740px;
 }
+ul {
+  list-style: none;
+  display: inline-flex;
+  padding: 0; 
+  li {
+    margin-right: 10px;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        font-style: italic;
+    }
+  }
+  li:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+.active {
+    font-style: italic;
+}
