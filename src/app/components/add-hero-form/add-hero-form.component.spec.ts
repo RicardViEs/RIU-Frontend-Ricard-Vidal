@@ -6,7 +6,6 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideRouter, Router } from '@angular/router';
 import { HeroService } from '../../services/hero.service';
 import { of } from 'rxjs';
-import { routes } from '../../app.routes';
 
 describe('AddHeroFormComponent', () => {
   let component: AddHeroFormComponent;
@@ -22,10 +21,7 @@ describe('AddHeroFormComponent', () => {
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
-        provideRouter(routes),
-        {
-          provide: HeroService, useValue: heroServiceSpy
-        },
+        provideRouter([]),
         {
           provide: HeroService, useValue: heroServiceSpy
         }
@@ -34,7 +30,6 @@ describe('AddHeroFormComponent', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(AddHeroFormComponent);
-    router = TestBed.inject(Router);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
