@@ -1,4 +1,8 @@
 mat-card {
     margin: 20px 0;
     box-shadow: var(--mat-sys-level3) 
+
+}
+button:not(:first-child) {
+    margin-left: 10px;
 }
